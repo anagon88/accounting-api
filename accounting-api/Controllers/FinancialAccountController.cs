@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 
-namespace accounting_api.Controllers
+namespace Accounting.Controllers
 {
+    [RoutePrefix("api/sarasa")]
     public class FinancialAccountController : ApiController
     {
-        // GET api/values
+        /*// GET api/values
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
@@ -34,6 +31,6 @@ namespace accounting_api.Controllers
         // DELETE api/values/5
         public void Delete(int id)
         {
-        }
+        }*/
     }
 }

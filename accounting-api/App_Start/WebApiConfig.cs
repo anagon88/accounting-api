@@ -1,17 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
+using Accounting.Unity;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
-namespace accounting_api
+namespace Accounting
 {
     public static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)
         {
-            // Configuración y servicios de API web
+            // Web API configuration and services
+            var resolver = new UnityResolver(UnityConfig.GetConfiguredContainer());
+            config.DependencyResolver = resolver;
+            
+            //I change the json serialization in order to match the required in the challenge (json snake_case)
+            JsonSerializerSettings serializer = config.Formatters.JsonFormatter.SerializerSettings;
+            serializer.ContractResolver = new DefaultContractResolver()
+            {
+                NamingStrategy = new SnakeCaseNamingStrategy()
+            };
 
-            // Rutas de API web
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
