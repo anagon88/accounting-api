@@ -1,7 +1,5 @@
-using System;
-using Accounting.AutoMapper;
-using Accounting.Repositories;
-using Accounting.Repositories.Interfaces;
+using Accounting.DataAccess.Repositories;
+using Accounting.DataAccess.Repositories.Interfaces;
 using Accounting.Services;
 using Accounting.Services.Interfaces;
 using Unity;

@@ -2,6 +2,7 @@
 using Accounting.Unity;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using System.Web.Http.Cors;
 
 namespace Accounting
 {
@@ -19,6 +20,7 @@ namespace Accounting
             {
                 NamingStrategy = new SnakeCaseNamingStrategy()
             };
+            config.EnableCors();
 
             config.MapHttpAttributeRoutes();
 

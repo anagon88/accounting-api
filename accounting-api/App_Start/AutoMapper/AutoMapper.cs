@@ -1,7 +1,5 @@
-using System;
-using System.Collections.Generic;
-using Accounting.DTO;
-using Accounting.Models;
+using Accounting.Services.Models;
+using Accounting.Web.DTO;
 using AutoMapper;
 
 namespace Accounting.AutoMapper

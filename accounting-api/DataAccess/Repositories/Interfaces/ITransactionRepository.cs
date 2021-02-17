@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using Accounting.Services.Models;
-using Accounting.Web.DTO;
 
-namespace Accounting.Services.Interfaces
+namespace Accounting.DataAccess.Repositories.Interfaces
 {
-    public interface ITransactionService
+    public interface ITransactionRepository
     {
         Transaction CreateTransaction(Transaction transaction);
 

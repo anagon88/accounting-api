@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Web.Http;
 
-namespace Accounting.DTO
+namespace Accounting.Services.Models
 {
-    public class TransactionDTO
+    public class Transaction
     {
         public Guid Id { get; set; }
 
-        public int Type { get; set; }
+        public TransactionType Type { get; set; }
 
         public decimal Amount { get; set; }
 

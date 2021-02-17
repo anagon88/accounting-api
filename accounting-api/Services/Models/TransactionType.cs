@@ -1,4 +1,4 @@
-﻿namespace Accounting.Models
+﻿namespace Accounting.Services.Models
 {
     public enum TransactionType
     {
