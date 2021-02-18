@@ -1,2 +1,2 @@
 # accounting-api
-Money Accounting Api
+Money Accounting Api - The App was developed in Angular. 
